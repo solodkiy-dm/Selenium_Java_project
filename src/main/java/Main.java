@@ -12,7 +12,6 @@ public class Main {
 
         //не явное ожидание, implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
         //maximize our window
         driver.manage().window().maximize();
 //
