@@ -159,17 +159,24 @@ public class Main {
 //        Thread.sleep(2000);
 
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
-        js1.executeScript("window.scrollBy(0,500)", "");
+        js1.executeScript("window.scrollBy(0,400)", "");
 
         String title = driver.getTitle();
         System.out.println(title);
         String handle = driver.getWindowHandle();
         System.out.println(handle);
-        System.out.println("Test Passed Successfully!!!");
         String currentUrl = driver.getCurrentUrl();
         System.out.println(currentUrl);
 
-        driver.quit();
+        if (title.equals("Używana Skoda na sprzedaż Ogłoszenia OLX.pl")) {
+            System.out.println("Test Passed Successfully!!!");
+            driver.quit();
+        } else {
+            System.out.println("Test Failed!!!");
+        }
+
+
+
 
     }
 }
