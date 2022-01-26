@@ -19,32 +19,32 @@ public class Main {
 //        WebElement element = (new WebDriverWait(driver, Duration.ofSeconds(10))
 //                    .until(ExpectedConditions.presenceOfElementLocated(By.id("123"))));
         //go to the page
-        driver.get("http://google.com");
+        driver.get("http://olx.pl");
 
         //click google settings
-        WebElement input = driver.findElement(By.xpath("//div[@class='jyfHyd']"));
-        input.click();
-        WebElement input1 = driver.findElement(By.xpath(
-                "//div[@class='VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd  iWeOse']" +
-                        "[1]//*[text()='Вкл.']"));
-        input1.click();
-        WebElement input2 = driver.findElement(By.xpath(
-                "//div[@class='VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd  iWeOse']" +
-                        "[2]//*[text()='Вкл.']"));
-        input2.click();
-        WebElement input3 = driver.findElement(By.xpath(
-                "//div[@class='VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd  iWeOse']" +
-                        "[3]//*[text()='Выкл.']"));
-        input3.click();
-        WebElement input4 = driver.findElement(By.xpath("//span[text()='Подтвердить']"));
-        input4.click();
+//        WebElement input = driver.findElement(By.xpath("//div[@class='jyfHyd']"));
+//        input.click();
+//        WebElement input1 = driver.findElement(By.xpath(
+//                "//div[@class='VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd  iWeOse']" +
+//                        "[1]//*[text()='Вкл.']"));
+//        input1.click();
+//        WebElement input2 = driver.findElement(By.xpath(
+//                "//div[@class='VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd  iWeOse']" +
+//                        "[2]//*[text()='Вкл.']"));
+//        input2.click();
+//        WebElement input3 = driver.findElement(By.xpath(
+//                "//div[@class='VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd  iWeOse']" +
+//                        "[3]//*[text()='Выкл.']"));
+//        input3.click();
+//        WebElement input4 = driver.findElement(By.xpath("//span[text()='Подтвердить']"));
+//        input4.click();
 
-        WebElement inputSearch = driver.findElement(By.xpath("//input[@name='q']"));
-        inputSearch.sendKeys("olx.pl", Keys.ENTER);
+//        WebElement inputSearch = driver.findElement(By.xpath("//input[@name='q']"));
+//        inputSearch.sendKeys("olx.pl", Keys.ENTER);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-        WebElement olx = driver.findElement(By.xpath("//h3[@class='LC20lb DKV0Md']"));
+        WebElement olx = driver.findElement(By.id("onetrust-accept-btn-handler"));
         olx.click();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -64,10 +64,7 @@ public class Main {
 //        }
 
 //        driver.navigate().back();
-        String title = driver.getTitle();
-        System.out.println(title);
-        String handle = driver.getWindowHandle();
-        System.out.println(handle);
+
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,100)", "");
@@ -122,44 +119,57 @@ public class Main {
         Thread.sleep(2000);
         rokProdOdValue.click();
 
-        WebElement rokProdDo = driver.findElement(By.xpath("(//span[text()='do'])[1]"));
-        Thread.sleep(2000);
-        rokProdDo.click();
+//        WebElement rokProdDo = driver.findElement(By.xpath("(//span[text()='do'])[1]"));
+//        Thread.sleep(2000);
+//        rokProdDo.click();
 
-        WebElement rokProdDoValue = driver.findElement(By.xpath("(//ul//a[@data-name='2010'])[2]"));
-        Thread.sleep(2000);
-        rokProdDoValue.click();
+//        WebElement rokProdDoValue = driver.findElement(By.xpath("(//ul//a[@data-name='2010'])[2]"));
+//        Thread.sleep(2000);
+//        rokProdDoValue.click();
 
-        WebElement pojSilOd = driver.findElement(By.xpath("(//span[text()='od'])[1]"));
-        Thread.sleep(2000);
-        pojSilOd.click();
+//        WebElement pojSilOd = driver.findElement(By.xpath("(//span[text()='od'])[1]"));
+//        Thread.sleep(2000);
+//        pojSilOd.click();
 
-        WebElement pojSilOdValue = driver.findElement(By.xpath("(//a[text()='1 250 cm³'])[1]"));
-        Thread.sleep(2000);
-        pojSilOdValue.click();
+//        WebElement pojSilOdValue = driver.findElement(By.xpath("(//a[text()='1 250 cm³'])[1]"));
+//        Thread.sleep(2000);
+//        pojSilOdValue.click();
 
-        WebElement pojSilDo = driver.findElement(By.xpath("(//span[text()='do'])[1]"));
-        Thread.sleep(2000);
-        pojSilDo.click();
+//        WebElement pojSilDo = driver.findElement(By.xpath("(//span[text()='do'])[1]"));
+//        Thread.sleep(2000);
+//        pojSilDo.click();
 
-        WebElement pojSilDoValue = driver.findElement(By.xpath("(//a[text()='2 000 cm³'])[2]"));
-        Thread.sleep(2000);
-        pojSilDoValue.click();
+//        WebElement pojSilDoValue = driver.findElement(By.xpath("(//a[text()='2 000 cm³'])[2]"));
+//        Thread.sleep(2000);
+//        pojSilDoValue.click();
 
 //        System.out.println(pojSilDoValue);
 //        System.out.println(pojSilOdValue);
 
-        WebElement przebiegOd = driver.findElement(By.xpath("(//span[text()='od'])[1]"));
-        Thread.sleep(2000);
-        przebiegOd.click();
-
-        WebElement przebiegOdValue = driver.findElement(By.xpath("//a[text()='200 000 km']"));
-        Thread.sleep(2000);
-        przebiegOdValue.click();
+//        WebElement przebiegOd = driver.findElement(By.xpath("(//span[text()='od'])[1]"));
+//        Thread.sleep(2000);
+//        przebiegOd.click();
+//
+//        WebElement przebiegOdValue = driver.findElement(By.xpath("//a[text()='200 000 km']"));
+//        Thread.sleep(2000);
+//        przebiegOdValue.click();
 
 //        WebElement przebiegDo = driver.findElement(By.xpath("(//span[text()='do'])[1]"));
 //        przebiegDo.sendKeys("250000");
 //        Thread.sleep(2000);
+
+        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        js1.executeScript("window.scrollBy(0,500)", "");
+
+        String title = driver.getTitle();
+        System.out.println(title);
+        String handle = driver.getWindowHandle();
+        System.out.println(handle);
+        System.out.println("Test Passed Successfully!!!");
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
+
+        driver.quit();
 
     }
 }
